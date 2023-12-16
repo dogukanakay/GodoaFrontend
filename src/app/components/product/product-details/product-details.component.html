@@ -1,0 +1,48 @@
+<div
+  *ngIf="dataLoaded == false"
+  class="spinner-border text-primary"
+  role="status"
+>
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+<div class="col-md-10 offset-md-2 scrollable-content">
+    <div
+      class="row"
+      *ngFor="let productDetails of productsDetails "
+    >
+
+      <div class="col-md-2" *ngIf="productDetails.status ==true">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h6>Ürün İsmi</h6>
+            {{ productDetails.productName }}
+          </li>
+          <li class="list-group-item">
+            <h6>Kategori</h6>
+            {{ productDetails.productCategoryName }}
+          </li>
+          <li class="list-group-item">
+            <h6>Detayları</h6>
+            {{ productDetails.description }}
+          </li>
+          <li class="list-group-item">
+            <h6>VFiyatı</h6>
+            {{ productDetails.price }}
+          </li>
+          <li class="list-group-item">
+            <h6>Stokta Kalan</h6>
+            {{ productDetails.stockQuantity }}
+          </li>
+          
+          <button
+            
+            
+            class="btn btn-success"
+          >
+            Satın Al
+          </button>
+        </ul>
+      </div>
+    </div>
+  </div>
