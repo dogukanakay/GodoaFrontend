@@ -10,11 +10,19 @@ import { AppComponent } from './app.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
 import { ProductAddComponent } from './components/product/product-add/product-add.component';
+
+import { NaviComponent } from './components/navi/navi.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
     ProductDetailsComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    NaviComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,9 @@ import { ProductAddComponent } from './components/product/product-add/product-ad
       positionClass:"toast-bottom-right"
     })
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi : true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

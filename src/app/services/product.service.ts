@@ -22,4 +22,15 @@ export class ProductService {
     let newPath = this.apiUrl+"add"
     return this.httpClient.post<ResponseModel>(newPath,productPost);
   }
+
+  deleteProduct(productDetails:ProductDetails):Observable<ResponseModel>{
+    let newPath = this.apiUrl+"delete"
+    return this.httpClient.post<ResponseModel>(newPath,productDetails);
+  }
+
+  updateStatus(productDetails:ProductDetails):Observable<ResponseModel>{
+    let newPath = this.apiUrl+"updatestatus"
+    return this.httpClient.post<ResponseModel>(newPath,productDetails)
+  }
+
 }
