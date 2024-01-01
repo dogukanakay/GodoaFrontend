@@ -1,0 +1,40 @@
+<div *ngIf="dataLoaded == false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  
+  <div>
+    <button class="btn btn-success" style="margin-left: 15px;" routerLink="product/add">Yeni Oyun Ekle</button>
+  </div>
+  <div class="d-flex flex-wrap">
+    <div *ngFor="let gameDetail of gameDetails"  class="w-25 p-3">
+      <div  class="h-100">
+        <ul class="list-group h-100">
+          <li class="list-group-item">
+            <h6>Oyun İsmi</h6>
+            {{ gameDetail.gameName }}
+          </li>
+          <li class="list-group-item">
+            <h6>Oyun Kategorisi</h6>
+            {{ gameDetail.gameCategoryName }}
+          </li>
+          <li class="list-group-item">
+            <h6>Oyun Tipi</h6>
+            {{ gameDetail.gameTypeName }}
+          </li>
+          
+          <li class="list-group-item">
+            <h6>Platform</h6>
+            {{ gameDetail.platformName }}
+          </li>
+          <li class="list-group-item">
+            <h6>Açıklama</h6>
+            {{ gameDetail.description }}
+          </li>
+          <li class="list-group-item d-flex justify-content-between  align-items-center">
+            <button class="btn btn-danger" (click)="deleteGame(gameDetail)">Sil</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

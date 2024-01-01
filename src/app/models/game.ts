@@ -17,3 +17,12 @@ export interface GamePost{
     imagePath:string
     description:string
 }
+
+export interface GameType{
+    gameTypeId:number
+    gameTypeName:string
+}
+export interface GameCategory{
+    gameCategoryId:number
+    gameCategoryName:string
+}

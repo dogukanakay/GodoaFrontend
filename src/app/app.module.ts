@@ -15,6 +15,12 @@ import { NaviComponent } from './components/navi/navi.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { GameDetailsComponent } from './components/game/game-details/game-details.component';
+import { GameAddComponent } from './components/game/game-add/game-add.component';
+import { GameCategoryComponent } from './components/game/game-category/game-category.component';
+import { GameEnvironmentsComponent } from './components/game/game-environments/game-environments.component';
+import { PlatformComponent } from './components/game/platform/platform.component';
+import { GameTypeComponent } from './components/game/game-type/game-type.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +28,13 @@ import { RegisterComponent } from './components/auth/register/register.component
     ProductAddComponent,
     NaviComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    GameDetailsComponent,
+    GameAddComponent,
+    GameCategoryComponent,
+    GameEnvironmentsComponent,
+    PlatformComponent,
+    GameTypeComponent
   ],
   imports: [
     BrowserModule,

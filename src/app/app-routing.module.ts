@@ -4,11 +4,14 @@ import { ProductDetailsComponent } from './components/product/product-details/pr
 import { ProductAddComponent } from './components/product/product-add/product-add.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { LoginComponent } from './components/auth/login/login.component';
+import { GameDetailsComponent } from './components/game/game-details/game-details.component';
+import { GameEnvironmentsComponent } from './components/game/game-environments/game-environments.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full", component:ProductDetailsComponent},
   {path:"product/add",component:ProductAddComponent},
-
+  {path:"games",component:GameDetailsComponent},
+  {path:"gameenvironments", component:GameEnvironmentsComponent},
 
 
 

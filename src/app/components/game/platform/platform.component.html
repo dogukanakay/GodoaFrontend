@@ -1,0 +1,51 @@
+<div class="content" style="margin: 12px;">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h5 class="title">Platform Ekle</h5></div>
+        <div class="card-body">
+          <form [formGroup]="platformAddForm">
+            <div class="mb-3">
+              <label for="platformName">Platform İsmi</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="platformName"
+                  formControlName="platformName"
+                  class="form-control"
+                  placeholder="Platform İsmi"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-fill btn-primary" (click)="addPlatform()">
+            Ekle
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Platform Numarası</th>
+            <th scope="col">Platform İsmi</th>
+            <th scope="col">Sil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let platform of platforms">
+            <td>{{ platform.platformId }}</td>
+            <td>{{ platform.platformName }}</td>
+            <td><button class="btn btn-danger" (click)="deletePlatform(platform)">Sil</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    
+    
+    
+  
